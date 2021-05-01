@@ -7,6 +7,8 @@ npx create-react-app sample --template typescript
 `React.Fragment`はダミー要素
 
 ```tsx
+import React from 'react';
+// 中略
 <React.Fragment>
     <p>hello</p>
     <p>world</p>
@@ -22,6 +24,7 @@ https://github.com/dossari-book-archive/20210501-react-sample/commit/b3b02a21c00
 * src属性値は、import文で指定した静的リソースを指定可能
 
 ```tsx
+import React from 'react';
 import logo from './logo.svg';
 // 中略
 <img src={logo} />
@@ -36,10 +39,32 @@ https://github.com/dossari-book-archive/20210501-react-sample/commit/a03f74cfcdf
 |for|htmlFor|
 |class|className|
 |tabindex|tabIndex|
+
 など…
 
 ```tsx
+import React from 'react';
+// 中略
 <label htmlFor="inputForHtmlFor1">htmlFor:&nbsp;</label>
 <input id="inputForHtmlFor1" className="inputForHtmlFor" tabIndex={2} />&nbsp;
 <input id="inputForHtmlFor2" className="inputForHtmlFor" tabIndex={1} />
+```
+
+---
+
+### コメント構文
+https://github.com/dossari-book-archive/20210501-react-sample/commit/6c289b476f1f13a411158c437333aa1917873168
+
+```tsx
+import React from 'react';
+// 中略
+// タグ外のコメントは通常の文法の通り可能でOK
+<React.Fragment>
+    {// タグ内のコメントは、行コメントの場合、{}で括り行末の改行が必要
+    }
+    {/* または、部分コメント形式で記述 */}
+    {/* ※<!-- --> は使用できない */}
+    <p>hello</p>
+    {/*以下略*/}
+</React.Fragment>
 ```
