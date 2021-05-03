@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const datetime = new Date().toLocaleString()
 function App() {
   return (
     // タグ外のコメントは通常の文法の通り可能でOK
@@ -12,12 +13,14 @@ function App() {
       {/* ※<!-- --> は使用できない */}
       <p>hello</p>
       <p>world</p>
-      
+
       <div>
         <label htmlFor="inputForHtmlFor1">htmlFor:&nbsp;</label>
         <input id="inputForHtmlFor1" className="inputForHtmlFor" tabIndex={2} />&nbsp;
         <input id="inputForHtmlFor2" className="inputForHtmlFor" tabIndex={1} />
       </div>
+      <p>現在の日時は{datetime}です。</p>
+      <p>2の8乗は{2 ** 8}です。</p>
       <img src={logo} />
     </React.Fragment>
   );
