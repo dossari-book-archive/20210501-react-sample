@@ -80,4 +80,12 @@ const datetime = new Date().toLocaleString()
 <p>現在の日時は{datetime}です。</p>
 <p>2の8乗は{2 ** 8}です。</p>
 ```
+---
 
+### JavaScript式の埋め込み
+https://github.com/dossari-book-archive/20210501-react-sample/commit/154873662239b3d67d5ac2e1d4f875d72de11f82
+
+```tsx
+<p>{'<strong>エスケープされます</strong>'}</p>
+<p dangerouslySetInnerHTML={{__html: '<strong>エスケープされません</strong>'}}></p>
+```
