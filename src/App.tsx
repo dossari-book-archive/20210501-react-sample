@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 const datetime = new Date().toLocaleString()
+const attr = {
+  title: "タイトルです",
+  style: {
+    color: "blue"
+  }
+}
 function App() {
   return (
     // タグ外のコメントは通常の文法の通り可能でOK
@@ -27,6 +33,8 @@ function App() {
       <p dangerouslySetInnerHTML={{ __html: '<strong>エスケープされません</strong>' }}></p>
       <hr />
       <p style={{ color: "red", backgroundColor: "yellow" }}>スタイル属性の指定</p>
+      <hr />
+      <p {...attr} >属性をまとめて設定</p>
       <hr />
       <img src={logo} />
     </React.Fragment>
