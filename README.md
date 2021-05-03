@@ -136,3 +136,27 @@ const fragment = <React.Fragment>
   {fragment}
 </React.Fragment>
 ```
+
+---
+
+### React.createElementの使用
+https://github.com/dossari-book-archive/20210501-react-sample/commit/210ea4923e38dc4cb0a3d6827209e6bfab0b3d22
+
+```tsx
+const elemByCreateElement = React.createElement(
+  "p",
+  { style: { color: "green" } },
+  'React.createElementで作成したテキスト'
+)
+const elemByCreateElement2 = React.createElement(
+  React.Fragment,
+  null,
+  React.createElement("strong", null, 'React.createElement'),
+  React.createElement("span", null, 'で作成したエレメント')
+)
+// 中略
+<React.Fragment>
+  {elemByCreateElement}
+  {elemByCreateElement2}
+</React.Fragment>
+````
