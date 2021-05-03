@@ -13,16 +13,19 @@ function App() {
       {/* ※<!-- --> は使用できない */}
       <p>hello</p>
       <p>world</p>
-
+      <hr />
       <div>
         <label htmlFor="inputForHtmlFor1">htmlFor:&nbsp;</label>
         <input id="inputForHtmlFor1" className="inputForHtmlFor" tabIndex={2} />&nbsp;
         <input id="inputForHtmlFor2" className="inputForHtmlFor" tabIndex={1} />
       </div>
+      <hr />
       <p>現在の日時は{datetime}です。</p>
       <p>2の8乗は{2 ** 8}です。</p>
+      <hr />
       <p>{'<strong>エスケープされます</strong>'}</p>
-      <p dangerouslySetInnerHTML={{__html: '<strong>エスケープされません</strong>'}}></p>
+      <p dangerouslySetInnerHTML={{ __html: '<strong>エスケープされません</strong>' }}></p>
+      <hr />
       <img src={logo} />
     </React.Fragment>
   );
