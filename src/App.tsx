@@ -15,6 +15,19 @@ const fragment = <React.Fragment>
   <strong>複数要素</strong>
   <span>を持てる</span>
 </React.Fragment>
+
+const elemByCreateElement = React.createElement(
+  "p",
+  { style: { color: "green" } },
+  'React.createElementで作成したテキスト'
+)
+const elemByCreateElement2 = React.createElement(
+  React.Fragment,
+  null,
+  React.createElement("strong", null, 'React.createElement'),
+  React.createElement("span", null, 'で作成したエレメント')
+)
+
 function App() {
   return (
     // タグ外のコメントは通常の文法の通り可能でOK
@@ -44,6 +57,9 @@ function App() {
       <hr />
       {elem}
       {fragment}
+      <hr />
+      {elemByCreateElement}
+      {elemByCreateElement2}
       <img src={logo} />
     </React.Fragment>
   );
