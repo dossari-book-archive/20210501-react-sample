@@ -101,3 +101,19 @@ https://github.com/dossari-book-archive/20210501-react-sample/commit/62a71126832
 ```tsx
 <p style={{ color: "red", backgroundColor: "yellow" }}>スタイル属性の指定</p>
 ```
+
+---
+
+### 属性をまとめて設定
+https://github.com/dossari-book-archive/20210501-react-sample/commit/d66b5b4d28c6babb051b27963e6060afbd448230
+
+```tsx
+const attr = {
+  title: "タイトルです",
+  style: {
+    color: "blue"
+  }
+}
+// 中略
+<p {...attr} >属性をまとめて設定</p>
+```
