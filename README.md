@@ -89,3 +89,15 @@ https://github.com/dossari-book-archive/20210501-react-sample/commit/15487366223
 <p>{'<strong>エスケープされます</strong>'}</p>
 <p dangerouslySetInnerHTML={{__html: '<strong>エスケープされません</strong>'}}></p>
 ```
+
+---
+
+### スタイル属性の指定
+https://github.com/dossari-book-archive/20210501-react-sample/commit/62a71126832b8fd726b01e9c988bda2d126279a1
+
+* オブジェクト形式
+* キャメルケース
+
+```tsx
+<p style={{ color: "red", backgroundColor: "yellow" }}>スタイル属性の指定</p>
+```
