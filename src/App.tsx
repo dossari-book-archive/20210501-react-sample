@@ -26,6 +26,8 @@ function App() {
       <p>{'<strong>エスケープされます</strong>'}</p>
       <p dangerouslySetInnerHTML={{ __html: '<strong>エスケープされません</strong>' }}></p>
       <hr />
+      <p style={{ color: "red", backgroundColor: "yellow" }}>スタイル属性の指定</p>
+      <hr />
       <img src={logo} />
     </React.Fragment>
   );
