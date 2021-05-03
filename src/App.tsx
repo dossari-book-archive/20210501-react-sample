@@ -9,6 +9,12 @@ const attr = {
     color: "blue"
   }
 }
+const elem = <p>変数定義したエレメントの使用</p>
+const fragment = <React.Fragment>
+  <span>変数定義したReact.Fragmentの使用。</span>
+  <strong>複数要素</strong>
+  <span>を持てる</span>
+</React.Fragment>
 function App() {
   return (
     // タグ外のコメントは通常の文法の通り可能でOK
@@ -36,6 +42,8 @@ function App() {
       <hr />
       <p {...attr} >属性をまとめて設定</p>
       <hr />
+      {elem}
+      {fragment}
       <img src={logo} />
     </React.Fragment>
   );
