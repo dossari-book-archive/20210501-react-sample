@@ -21,6 +21,8 @@ function App() {
       </div>
       <p>現在の日時は{datetime}です。</p>
       <p>2の8乗は{2 ** 8}です。</p>
+      <p>{'<strong>エスケープされます</strong>'}</p>
+      <p dangerouslySetInnerHTML={{__html: '<strong>エスケープされません</strong>'}}></p>
       <img src={logo} />
     </React.Fragment>
   );
