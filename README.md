@@ -117,3 +117,22 @@ const attr = {
 // 中略
 <p {...attr} >属性をまとめて設定</p>
 ```
+
+---
+
+### 変数定義したエレメントの使用
+https://github.com/dossari-book-archive/20210501-react-sample/commit/752c0d9a539d9b30dc6bb10a3c22119d706cb0bb
+
+```tsx
+const elem = <p>変数定義したエレメントの使用</p>
+const fragment = <React.Fragment>
+  <span>変数定義したReact.Fragmentの使用。</span>
+  <strong>複数要素</strong>
+  <span>を持てる</span>
+</React.Fragment>
+// 中略
+<React.Fragment>
+  {elem}
+  {fragment}
+</React.Fragment>
+```
