@@ -159,4 +159,32 @@ const elemByCreateElement2 = React.createElement(
   {elemByCreateElement}
   {elemByCreateElement2}
 </React.Fragment>
-````
+```
+
+---
+
+### コンポーネント定義、パラメータ渡し（クラス宣言する方法）
+https://github.com/dossari-book-archive/20210501-react-sample/commit/c04f0e5f9779088a2814e53e237e3634edad8b65
+
+components/Sample.tsx
+
+```tsx
+import React, { Component } from 'react'
+
+export default class Sample extends Component<{
+  stringValue: string
+  numberValue: number
+}> {
+  render() {
+    return (
+      <div>渡された値は「{this.props.stringValue}」, 「{this.props.numberValue}」です</div>
+    )
+  }
+}
+```
+
+App.tsx
+
+```tsx
+<Sample stringValue="値1" numberValue={123}></Sample>
+```
