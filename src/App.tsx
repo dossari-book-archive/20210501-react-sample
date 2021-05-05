@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Sample from './components/Sample'
 import './App.css';
 
 const datetime = new Date().toLocaleString()
@@ -60,6 +61,8 @@ function App() {
       <hr />
       {elemByCreateElement}
       {elemByCreateElement2}
+      <hr />
+      <Sample stringValue="値1" numberValue={123}></Sample>
       <img src={logo} />
     </React.Fragment>
   );
